@@ -26,10 +26,6 @@ index route is rendered.
 First lets use the `IndexLink`
 
 ```js
-// App.js
-import { IndexLink, Link } from 'react-router'
-
-// ...
 <li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
 ```
 
@@ -42,18 +38,18 @@ We can use `Link` as well by passing it the `onlyActiveOnIndex` prop
 (`IndexLink` just wraps `Link` with this property for convenience).
 
 ```js
-<li><Link to="/" activeClassName="active" onlyActiveOnIndex={true}>Home</Link></li>
+<li><Link to="/" activeClassName="active" onlyActiveOnIndex>Home</Link></li>
 ```
 
 That's fine, but we already abstracted away having to know what the
 `activeClassName` is with `Nav`.
 
-Remember, in `NavLink` we're passing along all of our props to `Link` with
+Remember, in `Nav` we're passing along all of our props to `Link` with
 the `{...spread}` syntax, so we can actually add the prop when we render
 a `NavLink` and it will make its way down to the `Link`:
 
 ```js
-<li><NavLink to="/" onlyActiveOnIndex={true}>Home</NavLink></li>
+<li><NavLink to="/" onlyActiveOnIndex>Home</NavLink></li>
 ```
 
 ---

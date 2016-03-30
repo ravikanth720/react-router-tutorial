@@ -9,7 +9,7 @@ up our project.
 ## Clone the Tutorial
 
 ```
-git clone https://github.com/reactjs/react-router-tutorial
+git clone <tutorial url>
 cd react-router-tutorial
 cd lessons/01-setting-up
 npm install

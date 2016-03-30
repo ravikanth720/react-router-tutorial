@@ -12,7 +12,7 @@ depending on the environment.
 Let's install a couple modules:
 
 ```
-npm install express if-env compression --save
+npm install if-env compression --save
 ```
 
 First, we'll use the handy `if-env` in `package.json`.  Update your
@@ -31,11 +31,10 @@ Now when we run `npm start` it will check if our `NODE_ENV` is
 production. If it is, we run `npm run start:prod`, if it's not, we run
 `npm run start:dev`.
 
-Now we're ready to create a production server with Express and add a new file at root dir. Here's a
+Now we're ready to create a production server with Express. Here's a
 first attempt:
 
 ```js
-// server.js
 var express = require('express')
 var path = require('path')
 var compression = require('compression')
@@ -58,14 +57,12 @@ app.listen(PORT, function() {
 
 Now run:
 
-```sh
+```
 NODE_ENV=production npm start
-# For Windows users:
-# SET NODE_ENV=production npm start
 ```
 
 Congratulations! You now have a production server for this app. After
-clicking around, try navigating to [http://localhost:8080/package.json](http://localhost:8080/package.json).
+clicking around, try navigating to `http://localhost:8080/package.json`.
 Whoops.  Let's fix that. We're going to shuffle around a couple files and
 update some paths scattered across the app.
 

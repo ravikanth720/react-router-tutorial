@@ -3,14 +3,14 @@
 Consider the following urls:
 
 ```
-/repos/reactjs/react-router
+/repos/rackt/react-router
 /repos/facebook/react
 ```
 
 These urls would match a route path like this:
 
 ```
-/repos/:userName/:repoName
+/repos/:userName/:repositoryName
 ```
 
 The parts that start with `:` are url parameters whose values will be
@@ -47,8 +47,9 @@ Now open up `index.js` and add the new route.
 import Repo from './modules/Repo'
 
 render((
-  <Router history={hashHistory}>
+  <Router>
     <Route path="/" component={App}>
+      <IndexRoute component={Home}/>
       <Route path="/repos" component={Repos}/>
       {/* add the new route */}
       <Route path="/repos/:userName/:repoName" component={Repo}/>
@@ -72,7 +73,7 @@ export default React.createClass({
 
         {/* add some links */}
         <ul>
-          <li><Link to="/repos/reactjs/react-router">React Router</Link></li>
+          <li><Link to="/repos/rackt/react-router">React Router</Link></li>
           <li><Link to="/repos/facebook/react">React</Link></li>
         </ul>
 

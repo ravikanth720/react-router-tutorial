@@ -14,7 +14,7 @@ Let's see how it looks with inline styles, add `activeStyle` to your
 <li><Link to="/repos" activeStyle={{ color: 'red' }}>Repos</Link></li>
 ```
 
-Now as you navigate, the active link is red.
+How as you navigate, the active link is red.
 
 ## Active Class Name
 
@@ -47,7 +47,7 @@ our `index.html`.
 ## Nav Link Wrappers
 
 Most links in your site don't need to know they are active, usually just
-primary navigation links need to know. It's useful to wrap those so you
+primary navigation links need to know. Its useful to wrap those so you
 don't have to remember what your `activeClassName` or `activeStyle` is
 everywhere.
 

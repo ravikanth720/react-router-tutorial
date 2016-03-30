@@ -20,8 +20,8 @@ module.exports = {
   }, {}),
 
   node: {
-    __filename: false,
-    __dirname: false
+    __filename: true,
+    __dirname: true
   },
 
   module: {
